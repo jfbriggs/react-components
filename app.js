@@ -9,14 +9,6 @@ let GroceryList = () => (
   </ul>
 );
 
-let Cheese = () => (
-  <li>Cheese</li>
-);
-
-let Crackers = () => (
-  <li>Crackers</li>
-);
-
 class GroceryListItem extends React.Component {
 
   constructor(props) {

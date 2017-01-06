@@ -2,9 +2,17 @@
 
 let GroceryList = () => (
   <ul>
-    <li>Cheese</li>
-    <li>Crackers</li>
+    <Cheese />
+    <Crackers />
   </ul>
+);
+
+let Cheese = () => (
+  <li>Cheese</li>
+);
+
+let Crackers = () => (
+  <li>Crackers</li>
 );
 
 ReactDOM.render(<GroceryList />, document.getElementById("app"));

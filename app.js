@@ -17,8 +17,33 @@ let Crackers = () => (
   <li>Crackers</li>
 );
 
-let GroceryListItem = (props) => (
-  <li>{props.item}</li>
-);
+class GroceryListItem extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      bold: false
+    }
+  }
+
+  onListItemHover() {
+    this.setState({
+      done: !this.state.done
+    });
+  }
+
+  render() {
+
+    var style = {
+      fontWeight: this.state.done ? 'bold' : 'normal'
+    };
+
+    return (
+      <li style={style} onMouseEnter={this.onListItemHover.bind(this)} onMouseLeave={this.onListItemHover.bind(this)}>{this.props.item}</li>
+    );
+  }
+
+};
 
 ReactDOM.render(<GroceryList />, document.getElementById("app"));
